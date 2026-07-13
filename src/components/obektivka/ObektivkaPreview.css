@@ -1,0 +1,331 @@
+.ob-doc {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.ob-page {
+  background: #ffffff;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  color: #000000;
+  line-height: 1.2;
+
+  width: 210mm;
+  min-height: 297mm;
+  padding: 2cm 1.5cm 2cm 3cm;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  border: 1px solid #bbbbbb;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+.ob-main-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 5mm 0;
+  line-height: 1.25;
+}
+
+.ob-topblock {
+  display: flex;
+  align-items: flex-start;
+  gap: 5mm;
+  margin-bottom: 4mm;
+}
+
+.ob-name-col {
+  flex: 1;
+  min-width: 0;
+}
+
+.ob-fullname {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0 2mm 0;
+  line-height: 1.25;
+  word-break: break-word;
+}
+
+.ob-current-pos {
+  font-size: 12pt;
+  font-weight: normal;
+  line-height: 1.25;
+  margin: 0;
+  text-align: left;
+}
+
+.ob-photo-box {
+  flex-shrink: 0;
+  width: 3cm;
+  height: 4cm;
+  border: 1px solid #000000;
+  border-radius: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f8;
+}
+
+.ob-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 0;
+}
+
+.ob-photo-ph {
+  font-size: 9pt;
+  color: #aaaaaa;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.ob-info-tbl,
+.ob-info-tbl tbody,
+.ob-info-tbl tr,
+.ob-info-tbl td {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  z-index: auto !important;
+  scroll-margin-top: 0 !important;
+  transform: none !important;
+}
+
+.ob-info-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 3mm;
+  font-size: 12pt;
+  table-layout: fixed;
+}
+
+.ob-info-tbl td {
+  border: none;
+  padding: 3px 2px 5px 0;
+  vertical-align: top !important;
+  line-height: 1.25;
+  word-break: break-word;
+  text-align: left !important;
+}
+
+.ob-info-tbl .tr-last td {
+  border-bottom: none;
+}
+
+.fl {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11pt;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.fv {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  font-weight: normal;
+  line-height: 1.25;
+}
+
+.td-inline {
+  vertical-align: top;
+}
+
+.fv-gap {
+  margin-left: 4px;
+}
+
+.ob-section-h {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 15px 0 15px 0;
+  line-height: 1.25;
+}
+
+.ob-work-tbl,
+.ob-work-tbl tbody,
+.ob-work-tbl tr,
+.ob-work-tbl td {
+  position: static !important;
+  top: auto !important;
+  right: auto !important;
+  z-index: auto !important;
+  scroll-margin-top: 0 !important;
+  transform: none !important;
+}
+
+.ob-work-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12pt;
+  table-layout: fixed;
+}
+
+.ob-work-tbl td {
+  border: none;
+  padding: 1.5px 0;
+  vertical-align: top !important;
+  line-height: 1.25;
+  text-align: left !important;
+}
+
+.work-period {
+  font-weight: bold;
+  white-space: nowrap;
+  padding-right: 3mm;
+  vertical-align: top;
+}
+
+.work-pos {
+  font-weight: normal;
+  word-break: break-word;
+}
+
+.work-row {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+.ob-dash {
+  font-size: 12pt;
+  color: #666;
+  margin: 1mm 0;
+}
+
+.ob-p2-line1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 13pt;
+  font-weight: normal;
+  text-align: center;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ob-p2-line2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 6mm 0;
+  line-height: 1.4;
+}
+
+.ob-rel-tbl,
+.ob-rel-tbl thead,
+.ob-rel-tbl tbody,
+.ob-rel-tbl tr,
+.ob-rel-tbl th,
+.ob-rel-tbl td {
+  position: static !important;
+  top: auto !important;
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  z-index: auto !important;
+  scroll-margin-top: 0 !important;
+  transform: none !important;
+  background: #ffffff !important;
+}
+
+.ob-rel-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5pt;
+  line-height: 1.25;
+  table-layout: fixed;
+}
+
+.ob-rel-tbl th {
+  border: 1px solid #000000 !important;
+  padding: 6px 4px;
+  text-align: center !important;
+  font-weight: bold;
+  vertical-align: top !important;
+  font-size: 10pt;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.ob-rel-tbl td {
+  border: 1px solid #000000 !important;
+  padding: 6px 4px;
+  text-align: center !important;
+  vertical-align: top !important;
+  word-break: break-word;
+}
+
+.td-rel-name {
+  font-weight: bold;
+}
+
+.tr-empty td {
+  height: 24px;
+}
+
+.ob-phone {
+  margin-top: 5mm;
+  font-size: 12pt;
+  line-height: 1.4;
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 2cm 1.5cm 2cm 3cm;
+  }
+
+  .ob-doc {
+    gap: 0;
+  }
+
+  .ob-page {
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    page-break-after: always;
+    break-after: page;
+  }
+
+  .ob-page:last-child {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  .ob-info-tbl,
+  .ob-work-tbl,
+  .ob-rel-tbl {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  .ob-topblock,
+  .ob-section-h,
+  .work-row {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  tr {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

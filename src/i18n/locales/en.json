@@ -1,0 +1,120 @@
+{
+  "menu": {
+    "obektivka": "Obektivka",
+    "resume": "Resume (CV)",
+    "coverLetter": "Cover Letter"
+  },
+  "title": {
+    "defaultDialogTitle": "Enter information",
+    "productCategory": "Product categories",
+    "characteristics": "Characteristics",
+    "partnersPosition": "Partner position",
+    "productGroups": "Product groups",
+    "id": "ID",
+    "name": "Name",
+    "actions": "Actions",
+    "users": "Users",
+    "dashboard": "Dashboard"
+  },
+  "label": {
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "add": "Add",
+    "delete": "Delete",
+    "errorMsg": "An error occurred!",
+    "successMsg": "Successfully completed!",
+    "loginSystem": "Sign in",
+    "logoutSystem": "Sign out",
+    "login": "Login",
+    "password": "Password",
+    "remember": "Remember me",
+    "requiresAuth": "Not authorized!",
+    "partners": "Partners",
+    "products": "Products",
+    "noData": "No data found!",
+    "logout": "Logout",
+    "errorAccured": "An error occurred!",
+    "wrongRequest": "Bad request!",
+    "notAllowed": "You don't have permission!",
+    "serverError": "Server error occurred!",
+    "requestTimeout": "Request timed out!",
+    "branches": "Branches",
+    "search": "Search",
+    "type": "Type",
+    "refresh": "Refresh",
+    "territory": "Territory"
+  },
+  "table": {
+    "phone": "Phone",
+    "fio": "Full Name",
+    "position": "Position",
+    "loginTime": "Login time",
+    "status": "Status",
+    "active": "Active",
+    "notActive": "Inactive",
+    "consultant": "Consultant",
+    "colobration": "Collaboration"
+  },
+  "home": {
+    "welcome_message": "Create your professional documents",
+    "subtitle": "Resume, Cover Letter and Obektivka — all in one place, ready to download as PDF",
+    "create_resume": "Create Resume",
+    "create_cover_letter": "Create Cover Letter",
+    "create_obektivka": "Create Obektivka",
+    "hero_badge": "Free · No sign-up · Instant PDF",
+    "trust": {
+      "no_registration": "No registration",
+      "data_on_device": "Data stays on device",
+      "free_forever": "Free forever"
+    },
+    "stats": {
+      "resume_templates": "Resume templates",
+      "cover_letter_styles": "Cover letter styles",
+      "free_forever": "Free forever",
+      "no_account": "Account needed"
+    },
+    "feature": {
+      "resume_title": "Professional Resume",
+      "resume_desc": "Create modern resumes that match international standards.",
+      "cover_letter_title": "Cover Letter",
+      "cover_letter_desc": "Write a cover letter that impresses recruiters.",
+      "obektivka_title": "Obektivka (Official CV)",
+      "obektivka_desc": "Fill in the official obektivka document and print it."
+    },
+    "docs": {
+      "title": "Three documents, one place",
+      "subtitle": "Everything a job seeker needs — built and exported in minutes."
+    },
+    "steps": {
+      "title": "How it works",
+      "step1": "Choose a template",
+      "step2": "Fill in your details",
+      "step3": "Download as PDF"
+    },
+    "benefits": {
+      "title": "Why ResumeIO",
+      "subtitle": "Built to be fast, private, and genuinely useful.",
+      "privacy_title": "Your data stays private",
+      "privacy_desc": "Everything is saved in your browser only. Nothing is uploaded to any server.",
+      "realtime_title": "Real-time preview",
+      "realtime_desc": "Watch your document update live as you type — no waiting, no refreshing.",
+      "templates_title": "Multiple templates",
+      "templates_desc": "Modern, Classic, Creative and more. Switch anytime without losing your data.",
+      "pdf_title": "One-click PDF export",
+      "pdf_desc": "Download a crisp, print-ready PDF instantly. No watermarks, no limits."
+    },
+    "cta": {
+      "title": "Ready to land your next job?",
+      "subtitle": "Build your resume, cover letter, and obektivka — free, fast, no account needed.",
+      "build_resume": "Build Resume",
+      "write_cover_letter": "Write Cover Letter"
+    }
+  },
+  "layout": {
+    "footer_tagline": "Your data never leaves your device",
+    "footer_free_forever": "Free forever",
+    "choose_color": "Choose color",
+    "color_theme": "Color theme"
+  }
+}

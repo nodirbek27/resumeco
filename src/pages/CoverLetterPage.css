@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Outfit:wght@400;600;800;900&family=Georgia&display=swap');
+
+.mobile-preview-fab {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  padding: 12px 20px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  border-radius: 999px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.mobile-preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5001;
+  background: #f8fafc;
+  overflow-y: auto;
+  padding: 0 16px 16px;
+}
+
+.preview-overlay-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8fafc;
+  padding: 12px 0;
+  margin: 0 -16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 6px 10px 6px 4px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1e293b;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.back-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}

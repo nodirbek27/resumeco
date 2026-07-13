@@ -1,0 +1,129 @@
+.obektivka-page-wrap {
+  min-height: 100vh;
+  background: #f1f5f9;
+  padding: 16px;
+}
+
+.obektivka-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.obektivka-topbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.obektivka-heading {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 4px;
+}
+
+.obektivka-sub {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.obektivka-actions {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.clear-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: #fee2e2;
+  color: #dc2626;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+
+.clear-btn:hover {
+  background: #fecaca;
+}
+
+.obektivka-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.preview-col {
+  position: sticky;
+  top: 16px;
+}
+
+.mobile-preview-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 999px;
+  background: var(--brand-primary, #239f55);
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+}
+
+.dialog-bar {
+  background: var(--brand-primary, #239f55);
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  min-height: 40px;
+}
+
+@media (max-width: 768px) {
+  .obektivka-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preview-col {
+    position: fixed;
+    left: -9999px;
+    top: 0;
+    width: 210mm;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .obektivka-page-wrap {
+    padding-bottom: 80px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+  }
+}

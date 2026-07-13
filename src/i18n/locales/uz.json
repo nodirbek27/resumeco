@@ -1,0 +1,121 @@
+{
+  "menu": {
+    "obektivka": "Obektivka",
+    "resume": "Rezyume (CV)",
+    "coverLetter": "Muqova Xati"
+  },
+  "title": {
+    "defaultDialogTitle": "Ma'lumotlarni kiriting",
+    "productCategory": "Tovar kategoriyalari",
+    "characteristics": "Hususiyatlar",
+    "partnersPosition": "Hamkorlar lavozimi",
+    "productGroups": "Tovar guruhlari",
+    "id": "ID",
+    "name": "Nomi",
+    "actions": "Harakatlar",
+    "users": "Foydalanuvchilar",
+    "dashboard": "Dashboard"
+  },
+  "label": {
+    "cancel": "Bekor qilish",
+    "save": "Saqlash",
+    "edit": "Tahrirlash",
+    "add": "Qo'shish",
+    "delete": "O'chirish",
+    "errorMsg": "Xatolik yuz berdi!",
+    "successMsg": "Muvaffaqiyali bajaildi!",
+    "loginSystem": "Tizimga kirish",
+    "logoutSystem": "Tizimdan chiqish",
+    "login": "Login",
+    "password": "Parol",
+    "remember": "Eslab qolish",
+    "requiresAuth": "Avtorizatsiya qilinmagan!",
+    "partners": "Hamkorlar",
+    "products": "Tovarlar",
+    "noData": "M'alumot topilmadi!",
+    "logout": "Chiqish",
+    "errorAccured": "Xatolik yuz berdi!",
+    "wrongRequest": "Noto'g'ri so'rov!",
+    "notAllowed": "Sizda ruxsat yo'q!",
+    "serverError": "Serverda xatolik yuz berdi!",
+    "requestTimeout": "So'rov vaqti tugadi!",
+    "branches": "Filiallar",
+    "search": "Qidirish",
+    "type": "Turi",
+    "refresh": "Yangilash",
+    "territory": "Hudud"
+  },
+  "table": {
+    "phone": "Telefon",
+    "fio": "F.I.O",
+    "position": "Lavozim",
+    "loginTime": "Tashrif vaqti",
+    "status": "Holati",
+    "active": "Faol",
+    "notActive": "Nofaol",
+    "consultant": "Maslahatchi",
+    "colobration": "Kolobratsiya"
+  },
+  "home": {
+    "welcome_message": "Professional hujjatlaringizni yarating",
+    "subtitle": "Resume, Cover Letter va Obektivka – barchasini bir joyda tayyorlang va PDF yuklang",
+    "create_resume": "Resume yaratish",
+    "create_cover_letter": "Cover Letter yaratish",
+    "create_obektivka": "Obyektivka yaratish",
+    "hero_badge": "Bepul · Ro'yxatdan o'tmasdan · Tezkor PDF",
+    "trust": {
+      "no_registration": "Ro'yxatdan o'tish shart emas",
+      "data_on_device": "Ma'lumotlar qurilmada saqlanadi",
+      "free_forever": "Doim bepul"
+    },
+    "stats": {
+      "resume_templates": "Rezyume shablonlari",
+      "cover_letter_styles": "Muqova xati uslublari",
+      "free_forever": "Har doim bepul",
+      "no_account": "Akkaunt kerak emas"
+    },
+    "feature": {
+      "resume_title": "Professional Resume",
+      "resume_desc": "Xalqaro standartlarga mos zamonaviy resume yarating va PDF yuklab oling.",
+      "cover_letter_title": "Cover Letter",
+      "cover_letter_desc": "Rekruterlarni taassurlantiruvchi muqova xati yozing.",
+      "obektivka_title": "Obektivka (Ma’lumotnoma)",
+      "obektivka_desc": "Rasmiy obyektivka hujjatini to’ldiring va chop eting."
+    },
+    "docs": {
+      "title": "Uchta hujjat, bitta joyda",
+      "subtitle": "Ish qidiruvchiga kerak bo'lgan hamma narsa — bir necha daqiqada tayyor va yuklab olinadi."
+    },
+    "steps": {
+      "title": "Bu qanday ishlaydi",
+      "step1": "Shablon tanlang",
+      "step2": "Ma'lumotlaringizni kiriting",
+      "step3": "PDF sifatida yuklab oling"
+    },
+    "benefits": {
+      "title": "Nega aynan ResumeIO",
+      "subtitle": "Tez, xavfsiz va haqiqatan foydali bo'lishi uchun yaratilgan.",
+      "privacy_title": "Ma'lumotlaringiz maxfiy qoladi",
+      "privacy_desc": "Barcha ma'lumotlar faqat brauzeringizda saqlanadi. Hech narsa serverga yuborilmaydi.",
+      "realtime_title": "Real vaqtda ko'rish",
+      "realtime_desc": "Yozayotganingizda hujjatingiz jonli yangilanadi — kutish yoki sahifani yangilash shart emas.",
+      "templates_title": "Ko'plab shablonlar",
+      "templates_desc": "Zamonaviy, Klassik, Ijodiy va boshqa uslublar. Ma'lumotlaringizni yo'qotmasdan istalgan vaqtda almashtiring.",
+      "pdf_title": "Bir bosishda PDF yuklash",
+      "pdf_desc": "Aniq, chop etishga tayyor PDF faylni bir zumda yuklab oling. Suv belgisiz, cheklovsiz."
+    },
+    "cta": {
+      "title": "Keyingi ish o'rningizni topishga tayyormisiz?",
+      "subtitle": "Rezyume, muqova xati va obyektivkangizni yarating — bepul, tez, ro'yxatdan o'tmasdan.",
+      "build_resume": "Rezyume yaratish",
+      "write_cover_letter": "Muqova xati yozish"
+    }
+  },
+  "layout": {
+    "footer_tagline": "Ma'lumotlaringiz qurilmangizdan chiqmaydi",
+    "footer_free_forever": "Doim bepul",
+    "choose_color": "Rangni tanlang",
+    "color_theme": "Rang mavzusi"
+  }
+}
+

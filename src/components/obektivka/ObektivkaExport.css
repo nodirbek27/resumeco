@@ -1,0 +1,53 @@
+.download-actions {
+  display: contents;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+.btn-pdf {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+}
+
+.btn-pdf:hover {
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn-word {
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+.btn-word:hover {
+  box-shadow: 0 4px 12px rgba(22, 163, 74, 0.4);
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+@media (max-width: 480px) {
+  .download-actions {
+    flex-direction: column;
+  }
+}
