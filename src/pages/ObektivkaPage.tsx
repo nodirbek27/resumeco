@@ -39,8 +39,12 @@ const defaultFormData: ObektivkaFormData = {
 const A4_PX = (210 / 25.4) * 96
 const A4_HEIGHT_PX = (297 / 25.4) * 96
 
+function loadInitial(): ObektivkaFormData {
+  return obektivkaStorage.load() ?? { ...defaultFormData }
+}
+
 export default function ObektivkaPage() {
-  const [formData, setFormData] = useState<ObektivkaFormData>({ ...defaultFormData })
+  const [formData, setFormData] = useState<ObektivkaFormData>(loadInitial)
   const [showPreviewDialog, setShowPreviewDialog] = useState(false)
   const [isMobile, setIsMobile] = useState(() => window.innerWidth < 1024)
   const [mobileScale, setMobileScale] = useState(1)
@@ -52,8 +56,6 @@ export default function ObektivkaPage() {
   }, [])
 
   useEffect(() => {
-    const saved = obektivkaStorage.load()
-    if (saved) setFormData(saved)
     updateScale()
     window.addEventListener('resize', updateScale)
     return () => window.removeEventListener('resize', updateScale)
