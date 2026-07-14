@@ -31,22 +31,22 @@ export default function BoldHeaderTemplate({ data }: ResumeTemplateProps) {
           </div>
           <div className="flex flex-wrap gap-x-5 gap-y-1 text-[11px] text-white/90 mt-5 font-mono">
             {data.email && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <EmailIcon sx={{ fontSize: 13 }} /> {data.email}
               </span>
             )}
             {data.phone && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <PhoneIcon sx={{ fontSize: 13 }} /> {data.phone}
               </span>
             )}
             {data.address && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <PlaceIcon sx={{ fontSize: 13 }} /> {data.address}
               </span>
             )}
             {data.website && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <LanguageIcon sx={{ fontSize: 13 }} /> {data.website}
               </span>
             )}

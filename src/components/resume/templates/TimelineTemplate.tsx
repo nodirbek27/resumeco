@@ -23,22 +23,22 @@ export default function TimelineTemplate({ data }: ResumeTemplateProps) {
           </p>
           <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[11px] text-slate-500 mt-4">
             {data.email && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <EmailIcon sx={{ fontSize: 12 }} /> {data.email}
               </span>
             )}
             {data.phone && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <PhoneIcon sx={{ fontSize: 12 }} /> {data.phone}
               </span>
             )}
             {data.address && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <PlaceIcon sx={{ fontSize: 12 }} /> {data.address}
               </span>
             )}
             {data.website && (
-              <span>
+              <span className="inline-flex items-center gap-1">
                 <LanguageIcon sx={{ fontSize: 12 }} /> {data.website}
               </span>
             )}

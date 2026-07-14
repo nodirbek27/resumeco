@@ -111,7 +111,7 @@ export default function SidebarRightTemplate({ data }: ResumeTemplateProps) {
           <h4 className="text-xs font-bold uppercase tracking-widest mb-3 pb-1 border-b border-white/20">
             Contact
           </h4>
-          <ul className="space-y-3.5 text-xs text-white/90">
+          <ul className="list-none m-0 pl-0 space-y-3.5 text-xs text-white/90">
             {data.phone && (
               <li className="flex items-start gap-2">
                 <PhoneIcon sx={{ fontSize: 14, mt: '2px' }} />

@@ -32,7 +32,7 @@ export default function ModernTemplate({ data }: ResumeTemplateProps) {
           >
             Contact
           </h4>
-          <ul className="space-y-3.5 text-xs text-slate-300">
+          <ul className="list-none m-0 pl-0 space-y-3.5 text-xs text-slate-300">
             {data.phone && (
               <li className="flex items-start gap-2">
                 <PhoneIcon sx={{ fontSize: 14, color: data.accentColor, mt: '2px' }} />

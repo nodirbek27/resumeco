@@ -34,22 +34,22 @@ export default function MinimalTemplate({ data }: ResumeTemplateProps) {
 
         <div className="flex flex-wrap gap-x-4 gap-y-1 text-[10px] text-slate-500 mb-6 font-mono">
           {data.email && (
-            <span>
+            <span className="inline-flex items-center gap-1">
               <EmailIcon sx={{ fontSize: 12 }} /> {data.email}
             </span>
           )}
           {data.phone && (
-            <span>
+            <span className="inline-flex items-center gap-1">
               <PhoneIcon sx={{ fontSize: 12 }} /> {data.phone}
             </span>
           )}
           {data.address && (
-            <span>
+            <span className="inline-flex items-center gap-1">
               <PlaceIcon sx={{ fontSize: 12 }} /> {data.address}
             </span>
           )}
           {data.website && (
-            <span>
+            <span className="inline-flex items-center gap-1">
               <LanguageIcon sx={{ fontSize: 12 }} /> {data.website}
             </span>
           )}

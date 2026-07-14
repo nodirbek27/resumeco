@@ -34,7 +34,7 @@ export default function ExecutivePhotoTemplate({ data }: ResumeTemplateProps) {
           <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3">
             Details
           </h3>
-          <ul className="space-y-2.5 text-[11px] text-slate-600 mb-6">
+          <ul className="list-none m-0 pl-0 space-y-2.5 text-[11px] text-slate-600 mb-6">
             {data.email && (
               <li className="flex items-start gap-2">
                 <EmailIcon sx={{ fontSize: 13 }} className="mt-0.5" />
@@ -64,7 +64,7 @@ export default function ExecutivePhotoTemplate({ data }: ResumeTemplateProps) {
           <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3">
             Skills
           </h3>
-          <ul className="space-y-1.5 text-[11px] text-slate-600 mb-6 list-disc list-inside">
+          <ul className="m-0 pl-0 space-y-1.5 text-[11px] text-slate-600 mb-6 list-disc list-inside">
             {skills.map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
@@ -107,7 +107,7 @@ export default function ExecutivePhotoTemplate({ data }: ResumeTemplateProps) {
                   <p className="text-slate-400 text-[10px] font-semibold mt-0.5 mb-1.5">
                     {exp.startDate} — {exp.endDate}
                   </p>
-                  <ul className="list-disc list-inside space-y-0.5 text-slate-500 text-[11px] leading-relaxed">
+                  <ul className="m-0 pl-0 list-disc list-inside space-y-0.5 text-slate-500 text-[11px] leading-relaxed">
                     {exp.description
                       .split('\n')
                       .filter(Boolean)
