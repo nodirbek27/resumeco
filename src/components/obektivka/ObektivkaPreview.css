@@ -4,6 +4,11 @@
   gap: 24px;
 }
 
+.ob-doc,
+.ob-doc * {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .ob-page {
   background: #ffffff;
   font-family: 'Times New Roman', Times, serif;
