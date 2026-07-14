@@ -77,10 +77,10 @@ export default function ObektivkaExport({ formData, previewRef }: Props) {
     setShowDonateDialog(true)
   }
 
-  const requestWord = () => {
-    setPendingAction('word')
-    setShowDonateDialog(true)
-  }
+  // const requestWord = () => {
+  //   setPendingAction('word')
+  //   setShowDonateDialog(true)
+  // }
 
   const onConfirmDownload = () => {
     if (pendingAction === 'pdf') downloadPDF()
