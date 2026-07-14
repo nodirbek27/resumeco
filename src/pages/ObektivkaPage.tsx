@@ -92,7 +92,7 @@ export default function ObektivkaPage() {
             <p className="obektivka-sub">Ma'lumotlarni to'ldiring va yuklab oling</p>
           </div>
           <div className="obektivka-actions">
-            <ObektivkaExport formData={formData} previewRef={previewRef.current} />
+            <ObektivkaExport formData={formData} previewRef={previewRef} />
             <button onClick={clearAllData} type="button" className="clear-btn">
               <DeleteOutlineIcon sx={{ fontSize: 18 }} />
               O'chirish

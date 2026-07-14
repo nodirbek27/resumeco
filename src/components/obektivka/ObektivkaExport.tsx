@@ -1,11 +1,11 @@
-import { useState } from 'react'
+import { useState, type RefObject } from 'react'
 import type { ObektivkaFormData } from '@/types/obektivka'
 import DonateDialog from '@/components/DonateDialog'
 import './ObektivkaExport.css'
 
 interface Props {
   formData: ObektivkaFormData
-  previewRef: HTMLDivElement | null
+  previewRef: RefObject<HTMLDivElement | null>
 }
 
 export default function ObektivkaExport({ formData, previewRef }: Props) {
@@ -17,12 +17,13 @@ export default function ObektivkaExport({ formData, previewRef }: Props) {
       const html2Canvas = (await import('html2canvas-pro')).default
       const { jsPDF } = await import('jspdf')
 
-      if (!previewRef) {
+      const previewEl = previewRef.current
+      if (!previewEl) {
         alert('Preview topilmadi')
         return
       }
 
-      const pages = previewRef.querySelectorAll<HTMLElement>('.obektivka-pdf-page')
+      const pages = previewEl.querySelectorAll<HTMLElement>('.obektivka-pdf-page')
 
       if (pages.length === 0) {
         alert('Sahifalar topilmadi')
