@@ -1,6 +1,6 @@
 {
   "menu": {
-    "obektivka": "Obektivka",
+    "obektivka": "Obyektivka",
     "resume": "Rezyume (CV)",
     "coverLetter": "Muqova Xati"
   },
@@ -58,7 +58,7 @@
   },
   "home": {
     "welcome_message": "Professional hujjatlaringizni yarating",
-    "subtitle": "Resume, Cover Letter va Obektivka – barchasini bir joyda tayyorlang va PDF yuklang",
+    "subtitle": "Resume, Cover Letter va Obyektivka – barchasini bir joyda tayyorlang va PDF yuklang",
     "create_resume": "Resume yaratish",
     "create_cover_letter": "Cover Letter yaratish",
     "create_obektivka": "Obyektivka yaratish",
@@ -79,7 +79,7 @@
       "resume_desc": "Xalqaro standartlarga mos zamonaviy resume yarating va PDF yuklab oling.",
       "cover_letter_title": "Cover Letter",
       "cover_letter_desc": "Rekruterlarni taassurlantiruvchi muqova xati yozing.",
-      "obektivka_title": "Obektivka (Ma’lumotnoma)",
+      "obektivka_title": "Obyektivka (Ma’lumotnoma)",
       "obektivka_desc": "Rasmiy obyektivka hujjatini to’ldiring va chop eting."
     },
     "docs": {

@@ -54,6 +54,35 @@ export default function ObektivkaPreview({ value }: Props) {
                 {value.joriyLavozimToliq && <strong>{value.joriyLavozimToliq}</strong>}
               </p>
             )}
+
+            <div className="ob-beside-photo">
+              <div className="obp-row">
+                <div className="obp-field">
+                  <b className="fl">Tug'ilgan yili:</b>
+                  <br />
+                  <span className="fv">
+                    {formatBirthDate(value.tugilganSana) || '_______________'}
+                  </span>
+                </div>
+                <div className="obp-field">
+                  <b className="fl">Tug'ilgan joyi:</b>
+                  <br />
+                  <span className="fv">{value.tugilganJoyi || '_______________'}</span>
+                </div>
+              </div>
+              <div className="obp-row">
+                <div className="obp-field">
+                  <b className="fl">Millati:</b>
+                  <br />
+                  <span className="fv">{value.millati || '_______________'}</span>
+                </div>
+                <div className="obp-field">
+                  <b className="fl">Partiyaviyligi:</b>
+                  <br />
+                  <span className="fv">{value.partiyaviyligi || yoq}</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="ob-photo-box">
@@ -75,30 +104,6 @@ export default function ObektivkaPreview({ value }: Props) {
             <col style={{ width: '50%' }} />
           </colgroup>
           <tbody>
-            <tr>
-              <td>
-                <b className="fl">Tug'ilgan yili:</b>
-                <br />
-                <span className="fv">{formatBirthDate(value.tugilganSana) || '_______________'}</span>
-              </td>
-              <td>
-                <b className="fl">Tug'ilgan joyi:</b>
-                <br />
-                <span className="fv">{value.tugilganJoyi || '_______________'}</span>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <b className="fl">Millati:</b>
-                <br />
-                <span className="fv">{value.millati || '_______________'}</span>
-              </td>
-              <td>
-                <b className="fl">Partiyaviyligi:</b>
-                <br />
-                <span className="fv">{value.partiyaviyligi || yoq}</span>
-              </td>
-            </tr>
             <tr>
               <td>
                 <b className="fl">Ma'lumoti:</b>

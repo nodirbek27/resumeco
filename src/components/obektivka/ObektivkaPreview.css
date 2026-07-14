@@ -63,6 +63,30 @@
   text-align: left;
 }
 
+.ob-beside-photo {
+  margin-top: 3mm;
+}
+
+.obp-row {
+  display: flex;
+}
+
+.obp-row + .obp-row {
+  margin-top: 2mm;
+}
+
+.obp-field {
+  min-width: 0;
+}
+
+.obp-field:first-child {
+  flex: 0 0 8.25cm;
+}
+
+.obp-field:last-child {
+  flex: 1;
+}
+
 .ob-photo-box {
   flex-shrink: 0;
   width: 3cm;

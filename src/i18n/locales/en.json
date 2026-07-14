@@ -1,6 +1,6 @@
 {
   "menu": {
-    "obektivka": "Obektivka",
+    "obektivka": "Obyektivka",
     "resume": "Resume (CV)",
     "coverLetter": "Cover Letter"
   },
@@ -58,10 +58,10 @@
   },
   "home": {
     "welcome_message": "Create your professional documents",
-    "subtitle": "Resume, Cover Letter and Obektivka — all in one place, ready to download as PDF",
+    "subtitle": "Resume, Cover Letter and Obyektivka — all in one place, ready to download as PDF",
     "create_resume": "Create Resume",
     "create_cover_letter": "Create Cover Letter",
-    "create_obektivka": "Create Obektivka",
+    "create_obektivka": "Create Obyektivka",
     "hero_badge": "Free · No sign-up · Instant PDF",
     "trust": {
       "no_registration": "No registration",
@@ -79,8 +79,8 @@
       "resume_desc": "Create modern resumes that match international standards.",
       "cover_letter_title": "Cover Letter",
       "cover_letter_desc": "Write a cover letter that impresses recruiters.",
-      "obektivka_title": "Obektivka (Official CV)",
-      "obektivka_desc": "Fill in the official obektivka document and print it."
+      "obektivka_title": "Obyektivka (Official CV)",
+      "obektivka_desc": "Fill in the official obyektivka document and print it."
     },
     "docs": {
       "title": "Three documents, one place",
@@ -106,7 +106,7 @@
     },
     "cta": {
       "title": "Ready to land your next job?",
-      "subtitle": "Build your resume, cover letter, and obektivka — free, fast, no account needed.",
+      "subtitle": "Build your resume, cover letter, and obyektivka — free, fast, no account needed.",
       "build_resume": "Build Resume",
       "write_cover_letter": "Write Cover Letter"
     }
