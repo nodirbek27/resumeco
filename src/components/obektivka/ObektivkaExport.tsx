@@ -91,17 +91,33 @@ export default function ObektivkaExport({ formData, previewRef }: Props) {
     <div className="download-actions">
       <button onClick={requestPdf} type="button" className="btn btn-pdf">
         <svg className="icon" viewBox="0 0 24 24">
-          <path fill="currentColor" d="M12 19l9 2-9-18-9 18 9-2m0 0v-8m0 8l-6-4m6 4l6-4" />
+          <path
+            fill="#ffffff"
+            d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6z"
+          />
+          <path fill="#dbe3ea" d="M14 2v6h6l-6-6z" />
+          <rect x="3" y="12.5" width="15" height="6.5" rx="1" fill="#e53935" />
+          <text
+            x="10.5"
+            y="17.6"
+            textAnchor="middle"
+            fontSize="5.4"
+            fontWeight="700"
+            fontFamily="Arial, Helvetica, sans-serif"
+            fill="#ffffff"
+          >
+            PDF
+          </text>
         </svg>
-        <span>PDF yuklash</span>
+        <span>Yuklab olish</span>
       </button>
 
-      <button onClick={requestWord} type="button" className="btn btn-word">
+      {/* <button onClick={requestWord} type="button" className="btn btn-word">
         <svg className="icon" viewBox="0 0 24 24">
           <path fill="currentColor" d="M12 19l9 2-9-18-9 18 9-2m0 0v-8m0 8l-6-4m6 4l6-4" />
         </svg>
         <span>Word yuklash</span>
-      </button>
+      </button> */}
 
       <DonateDialog
         open={showDonateDialog}

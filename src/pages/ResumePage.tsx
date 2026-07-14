@@ -298,7 +298,7 @@ export default function ResumePage() {
               className="px-4 py-2.5 bg-red-50 text-red-700 font-semibold rounded-xl hover:bg-red-100 transition flex items-center gap-2 text-sm shadow-sm"
             >
               <DeleteOutlinedIcon sx={{ fontSize: 18 }} />
-              Clear All
+              Clear
             </button>
             <button
               onClick={() => setShowDonateDialog(true)}
