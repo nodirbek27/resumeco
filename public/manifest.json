@@ -1,0 +1,17 @@
+{
+  "name": "ResumeIO — Resume, CV & Cover Letter Builder",
+  "short_name": "ResumeIO",
+  "description": "Build a professional resume, CV, and cover letter online for free.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#239f55",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
