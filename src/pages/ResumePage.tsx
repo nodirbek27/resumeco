@@ -15,6 +15,7 @@ import TemplatePickerCarousel from '@/components/TemplatePickerCarousel'
 import ResumeTemplateRender from '@/components/resume/ResumeTemplateRender'
 import type { ResumeData, Experience, Education } from '@/types/resume'
 import './ResumePage.css'
+import { captureElementAsCanvas } from '@/utils/pdfCapture'
 
 const resumeTemplates = [
   { id: 'modern', label: 'Modern Minimalist' },
@@ -244,7 +245,7 @@ export default function ResumePage() {
         await document.fonts.ready
       }
 
-      const canvas = await html2Canvas(element, {
+      const canvas = await captureElementAsCanvas(element, html2Canvas, {
         scale: 2,
         useCORS: true,
         allowTaint: true,
