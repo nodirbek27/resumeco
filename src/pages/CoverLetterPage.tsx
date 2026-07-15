@@ -11,7 +11,6 @@ import TemplatePickerCarousel from '@/components/TemplatePickerCarousel'
 import CoverLetterTemplateRender from '@/components/coverletter/CoverLetterTemplateRender'
 import type { CoverLetterData } from '@/types/coverLetter'
 import './CoverLetterPage.css'
-import { captureElementAsCanvas } from '@/utils/pdfCapture'
 
 const coverLetterTemplates = [
   { id: 'modern', label: 'Modern Minimalist' },
@@ -267,7 +266,7 @@ export default function CoverLetterPage() {
         await document.fonts.ready
       }
 
-      const canvas = await captureElementAsCanvas(element, html2Canvas, {
+      const canvas = await html2Canvas(element, {
         scale: 2,
         useCORS: true,
         allowTaint: true,

@@ -6,77 +6,214 @@ export default function ExecutivePhotoTemplate({ data }: ResumeTemplateProps) {
 
   return (
     <div
-      className="h-full flex flex-col bg-white text-slate-800"
-      style={{ fontFamily: "'Inter', sans-serif" }}
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: '#ffffff',
+        color: '#1e293b',
+        fontFamily: "'Inter', sans-serif",
+      }}
     >
       {/* Header band with overlapping photo */}
-      <div className="relative bg-slate-900 pt-6 pb-10 pl-32 pr-8">
-        <h2 className="text-2xl font-extrabold text-white uppercase tracking-wide leading-tight">
+      <div
+        style={{
+          position: 'relative',
+          backgroundColor: '#0f172a',
+          paddingTop: '24px',
+          paddingBottom: '40px',
+          paddingLeft: '128px',
+          paddingRight: '32px',
+        }}
+      >
+        <h2
+          style={{
+            fontSize: '24px',
+            fontWeight: 800,
+            color: '#ffffff',
+            textTransform: 'uppercase',
+            letterSpacing: '0.025em',
+            lineHeight: 1.25,
+          }}
+        >
           {data.fullname || 'Enter Full Name'}
         </h2>
-        <p className="text-xs font-semibold text-slate-300 uppercase tracking-widest mt-1.5">
+        <p
+          style={{
+            fontSize: '12px',
+            fontWeight: 600,
+            color: '#cbd5e1',
+            textTransform: 'uppercase',
+            letterSpacing: '0.1em',
+            marginTop: '6px',
+          }}
+        >
           {data.title || 'Job Title'}
         </p>
-        <div className="absolute left-8 -bottom-8 w-20 h-20 rounded-md overflow-hidden border-4 border-white shadow-lg bg-slate-200">
+        <div
+          style={{
+            position: 'absolute',
+            left: '32px',
+            bottom: '-32px',
+            width: '80px',
+            height: '80px',
+            borderRadius: '6px',
+            overflow: 'hidden',
+            border: '4px solid #ffffff',
+            boxShadow: '0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1)',
+            backgroundColor: '#e2e8f0',
+          }}
+        >
           {data.photo ? (
-            <img src={data.photo} className="w-full h-full object-cover" alt="" />
+            <img
+              src={data.photo}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              alt=""
+            />
           ) : (
-            <div className="w-full h-full flex items-center justify-center text-slate-400 text-[9px]">
+            <div
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#94a3b8',
+                fontSize: '9px',
+              }}
+            >
               No Photo
             </div>
           )}
         </div>
       </div>
 
-      <div className="grid grid-cols-12 flex-1">
+      <div
+        style={{ display: 'grid', gridTemplateColumns: 'repeat(12, minmax(0, 1fr))', flex: '1 1 0%' }}
+      >
         {/* Sidebar (left) */}
-        <div className="col-span-4 bg-slate-100 pt-12 pb-6 px-6">
-          <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3">
+        <div
+          style={{
+            gridColumn: 'span 4 / span 4',
+            backgroundColor: '#f1f5f9',
+            paddingTop: '48px',
+            paddingBottom: '24px',
+            paddingLeft: '24px',
+            paddingRight: '24px',
+          }}
+        >
+          <h3
+            style={{
+              fontSize: '12px',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              color: '#1e293b',
+              marginBottom: '12px',
+            }}
+          >
             Details
           </h3>
-          <ul className="list-none m-0 pl-0 space-y-2.5 text-[11px] text-slate-600 mb-6">
+          <ul
+            style={{
+              listStyle: 'none',
+              margin: 0,
+              paddingLeft: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '10px',
+              fontSize: '11px',
+              color: '#475569',
+              marginBottom: '24px',
+            }}
+          >
             {data.email && (
-              <li className="flex items-start gap-2">
-                <EmailIcon sx={{ fontSize: 13 }} className="mt-0.5" />
-                <span className="break-all">{data.email}</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <EmailIcon sx={{ fontSize: 13 }} style={{ marginTop: '2px' }} />
+                <span style={{ wordBreak: 'break-all' }}>{data.email}</span>
               </li>
             )}
             {data.address && (
-              <li className="flex items-start gap-2">
-                <PlaceIcon sx={{ fontSize: 13 }} className="mt-0.5" />
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <PlaceIcon sx={{ fontSize: 13 }} style={{ marginTop: '2px' }} />
                 <span>{data.address}</span>
               </li>
             )}
             {data.phone && (
-              <li className="flex items-start gap-2">
-                <PhoneIcon sx={{ fontSize: 13 }} className="mt-0.5" />
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <PhoneIcon sx={{ fontSize: 13 }} style={{ marginTop: '2px' }} />
                 <span>{data.phone}</span>
               </li>
             )}
             {data.website && (
-              <li className="flex items-start gap-2">
-                <LanguageIcon sx={{ fontSize: 13 }} className="mt-0.5" />
-                <span className="break-all">{data.website}</span>
+              <li style={{ display: 'flex', alignItems: 'flex-start', gap: '8px' }}>
+                <LanguageIcon sx={{ fontSize: 13 }} style={{ marginTop: '2px' }} />
+                <span style={{ wordBreak: 'break-all' }}>{data.website}</span>
               </li>
             )}
           </ul>
 
-          <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-3">
+          <h3
+            style={{
+              fontSize: '12px',
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              letterSpacing: '0.1em',
+              color: '#1e293b',
+              marginBottom: '12px',
+            }}
+          >
             Skills
           </h3>
-          <ul className="m-0 pl-0 space-y-1.5 text-[11px] text-slate-600 mb-6 list-disc list-inside">
+          <ul
+            style={{
+              listStyleType: 'disc',
+              listStylePosition: 'inside',
+              margin: 0,
+              paddingLeft: 0,
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '6px',
+              fontSize: '11px',
+              color: '#475569',
+              marginBottom: '24px',
+            }}
+          >
             {skills.map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
-            {!data.skills && <li className="text-slate-400 italic list-none">Not provided</li>}
+            {!data.skills && (
+              <li style={{ color: '#94a3b8', fontStyle: 'italic', listStyle: 'none' }}>
+                Not provided
+              </li>
+            )}
           </ul>
 
           {data.languages && (
             <>
-              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-800 mb-2 border-t border-slate-300 pt-4">
+              <h3
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  color: '#1e293b',
+                  marginBottom: '8px',
+                  borderTop: '1px solid #cbd5e1',
+                  paddingTop: '16px',
+                }}
+              >
                 Languages
               </h3>
-              <p className="text-[11px] font-bold text-slate-700 leading-relaxed whitespace-pre-line">
+              <p
+                style={{
+                  fontSize: '11px',
+                  fontWeight: 700,
+                  color: '#334155',
+                  lineHeight: 1.625,
+                  whiteSpace: 'pre-line',
+                }}
+              >
                 {data.languages}
               </p>
             </>
@@ -84,30 +221,79 @@ export default function ExecutivePhotoTemplate({ data }: ResumeTemplateProps) {
         </div>
 
         {/* Main (right) */}
-        <div className="col-span-8 pt-8 pb-6 px-8">
+        <div
+          style={{
+            gridColumn: 'span 8 / span 8',
+            paddingTop: '32px',
+            paddingBottom: '24px',
+            paddingLeft: '32px',
+            paddingRight: '32px',
+          }}
+        >
           {data.summary && (
-            <div className="mb-6">
-              <h3 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-2">
+            <div style={{ marginBottom: '24px' }}>
+              <h3
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  color: '#0f172a',
+                  marginBottom: '8px',
+                }}
+              >
                 Summary
               </h3>
-              <p className="text-xs text-slate-600 leading-relaxed">{data.summary}</p>
+              <p style={{ fontSize: '12px', color: '#475569', lineHeight: 1.625 }}>
+                {data.summary}
+              </p>
             </div>
           )}
 
-          <div className="mb-6">
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3">
+          <div style={{ marginBottom: '24px' }}>
+            <h3
+              style={{
+                fontSize: '12px',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: '#0f172a',
+                marginBottom: '12px',
+              }}
+            >
               Experience
             </h3>
-            <div className="space-y-4">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               {data.experience.map((exp, idx) => (
-                <div key={idx} className="text-xs">
-                  <h4 className="font-bold text-slate-900 text-sm">
+                <div key={idx} style={{ fontSize: '12px' }}>
+                  <h4 style={{ fontWeight: 700, color: '#0f172a', fontSize: '14px' }}>
                     {exp.position}, {exp.company}
                   </h4>
-                  <p className="text-slate-400 text-[10px] font-semibold mt-0.5 mb-1.5">
+                  <p
+                    style={{
+                      color: '#94a3b8',
+                      fontSize: '10px',
+                      fontWeight: 600,
+                      marginTop: '2px',
+                      marginBottom: '6px',
+                    }}
+                  >
                     {exp.startDate} — {exp.endDate}
                   </p>
-                  <ul className="m-0 pl-0 list-disc list-inside space-y-0.5 text-slate-500 text-[11px] leading-relaxed">
+                  <ul
+                    style={{
+                      listStyleType: 'disc',
+                      listStylePosition: 'inside',
+                      margin: 0,
+                      paddingLeft: 0,
+                      display: 'flex',
+                      flexDirection: 'column',
+                      gap: '2px',
+                      color: '#64748b',
+                      fontSize: '11px',
+                      lineHeight: 1.625,
+                    }}
+                  >
                     {exp.description
                       .split('\n')
                       .filter(Boolean)
@@ -118,33 +304,60 @@ export default function ExecutivePhotoTemplate({ data }: ResumeTemplateProps) {
                 </div>
               ))}
               {data.experience.length === 0 && (
-                <p className="text-xs text-slate-400 italic">No experience added</p>
+                <p style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic' }}>
+                  No experience added
+                </p>
               )}
             </div>
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-widest text-slate-900 mb-3">
+            <h3
+              style={{
+                fontSize: '12px',
+                fontWeight: 700,
+                textTransform: 'uppercase',
+                letterSpacing: '0.1em',
+                color: '#0f172a',
+                marginBottom: '12px',
+              }}
+            >
               Education
             </h3>
-            <div className="space-y-3">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
               {data.education.map((edu, idx) => (
-                <div key={idx} className="text-xs">
-                  <h4 className="font-bold text-slate-900 text-sm">
+                <div key={idx} style={{ fontSize: '12px' }}>
+                  <h4 style={{ fontWeight: 700, color: '#0f172a', fontSize: '14px' }}>
                     {edu.degree}, {edu.school}
                   </h4>
-                  <p className="text-slate-400 text-[10px] font-semibold mt-0.5">
+                  <p
+                    style={{
+                      color: '#94a3b8',
+                      fontSize: '10px',
+                      fontWeight: 600,
+                      marginTop: '2px',
+                    }}
+                  >
                     {edu.startDate} — {edu.endDate}
                   </p>
                   {edu.description && (
-                    <p className="text-slate-500 text-[11px] mt-1 leading-relaxed">
+                    <p
+                      style={{
+                        color: '#64748b',
+                        fontSize: '11px',
+                        marginTop: '4px',
+                        lineHeight: 1.625,
+                      }}
+                    >
                       {edu.description}
                     </p>
                   )}
                 </div>
               ))}
               {data.education.length === 0 && (
-                <p className="text-xs text-slate-400 italic">No education added</p>
+                <p style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic' }}>
+                  No education added
+                </p>
               )}
             </div>
           </div>

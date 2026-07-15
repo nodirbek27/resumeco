@@ -6,47 +6,97 @@ export default function BoldHeaderTemplate({ data }: ResumeTemplateProps) {
 
   return (
     <div
-      className="h-full flex flex-col justify-between bg-white text-slate-800"
-      style={{ fontFamily: "'Outfit', sans-serif" }}
+      style={{
+        height: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        backgroundColor: '#ffffff',
+        color: '#1e293b',
+        fontFamily: "'Outfit', sans-serif",
+      }}
     >
       <div>
         {/* Solid bold header banner */}
-        <div className="p-8 text-white" style={{ background: data.accentColor }}>
-          <div className="flex items-start justify-between gap-4">
+        <div style={{ padding: '32px', color: '#ffffff', background: data.accentColor }}>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'flex-start',
+              justifyContent: 'space-between',
+              gap: '16px',
+            }}
+          >
             <div>
-              <h2 className="text-3xl font-black uppercase tracking-wide leading-none">
+              <h2
+                style={{
+                  fontSize: '30px',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.025em',
+                  lineHeight: 1,
+                }}
+              >
                 {data.fullname || 'Enter Full Name'}
               </h2>
-              <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/80 mt-2">
+              <p
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.25em',
+                  color: 'rgba(255,255,255,0.8)',
+                  marginTop: '8px',
+                }}
+              >
                 {data.title || 'Job Title'}
               </p>
             </div>
             {data.photo && (
               <img
                 src={data.photo}
-                className="w-20 h-20 rounded-2xl object-cover border-2 border-white/50 shadow-md flex-shrink-0"
+                style={{
+                  width: '80px',
+                  height: '80px',
+                  borderRadius: '16px',
+                  objectFit: 'cover',
+                  border: '2px solid rgba(255,255,255,0.5)',
+                  boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1)',
+                  flexShrink: 0,
+                }}
                 alt=""
               />
             )}
           </div>
-          <div className="flex flex-wrap gap-x-5 gap-y-1 text-[11px] text-white/90 mt-5 font-mono">
+          <div
+            style={{
+              display: 'flex',
+              flexWrap: 'wrap',
+              columnGap: '20px',
+              rowGap: '4px',
+              fontSize: '11px',
+              color: 'rgba(255,255,255,0.9)',
+              marginTop: '20px',
+              fontFamily: 'monospace',
+            }}
+          >
             {data.email && (
-              <span className="inline-flex items-center gap-1">
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <EmailIcon sx={{ fontSize: 13 }} /> {data.email}
               </span>
             )}
             {data.phone && (
-              <span className="inline-flex items-center gap-1">
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <PhoneIcon sx={{ fontSize: 13 }} /> {data.phone}
               </span>
             )}
             {data.address && (
-              <span className="inline-flex items-center gap-1">
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <PlaceIcon sx={{ fontSize: 13 }} /> {data.address}
               </span>
             )}
             {data.website && (
-              <span className="inline-flex items-center gap-1">
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <LanguageIcon sx={{ fontSize: 13 }} /> {data.website}
               </span>
             )}
@@ -54,104 +104,205 @@ export default function BoldHeaderTemplate({ data }: ResumeTemplateProps) {
         </div>
 
         {/* Body: sidebar + main */}
-        <div className="grid grid-cols-12 gap-6 p-8">
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(12, minmax(0, 1fr))',
+            gap: '24px',
+            padding: '32px',
+          }}
+        >
           {/* Sidebar (left) */}
-          <div className="col-span-4 space-y-6">
+          <div
+            style={{
+              gridColumn: 'span 4 / span 4',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '24px',
+            }}
+          >
             <div>
-              <h3 className="text-xs font-black uppercase tracking-widest mb-2 flex items-center gap-1.5">
+              <h3
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
                 <span
-                  className="w-2 h-2 rounded-sm"
-                  style={{ background: data.accentColor }}
+                  style={{ width: '8px', height: '8px', borderRadius: '2px', background: data.accentColor }}
                 ></span>
                 Skills
               </h3>
-              <div className="flex flex-col gap-1.5">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                 {skills.map((skill) => (
-                  <span key={skill} className="text-[11px] font-semibold text-slate-700">
+                  <span key={skill} style={{ fontSize: '11px', fontWeight: 600, color: '#334155' }}>
                     {skill}
                   </span>
                 ))}
                 {!data.skills && (
-                  <span className="text-xs text-slate-400 italic">Not provided</span>
+                  <span style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic' }}>
+                    Not provided
+                  </span>
                 )}
               </div>
             </div>
             <div>
-              <h3 className="text-xs font-black uppercase tracking-widest mb-2 flex items-center gap-1.5">
+              <h3
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
                 <span
-                  className="w-2 h-2 rounded-sm"
-                  style={{ background: data.accentColor }}
+                  style={{ width: '8px', height: '8px', borderRadius: '2px', background: data.accentColor }}
                 ></span>
                 Languages
               </h3>
-              <p className="text-[11px] text-slate-700 leading-relaxed whitespace-pre-line">
+              <p
+                style={{
+                  fontSize: '11px',
+                  color: '#334155',
+                  lineHeight: 1.625,
+                  whiteSpace: 'pre-line',
+                }}
+              >
                 {data.languages || 'Not provided'}
               </p>
             </div>
             <div>
-              <h3 className="text-xs font-black uppercase tracking-widest mb-2 flex items-center gap-1.5">
+              <h3
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
                 <span
-                  className="w-2 h-2 rounded-sm"
-                  style={{ background: data.accentColor }}
+                  style={{ width: '8px', height: '8px', borderRadius: '2px', background: data.accentColor }}
                 ></span>
                 Education
               </h3>
-              <div className="space-y-3">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
                 {data.education.map((edu, idx) => (
-                  <div key={idx} className="text-[11px]">
-                    <strong className="text-slate-900 block">{edu.degree}</strong>
-                    <span className="text-slate-500 block">{edu.school}</span>
-                    <span className="text-slate-400 block font-mono text-[10px]">
+                  <div key={idx} style={{ fontSize: '11px' }}>
+                    <strong style={{ color: '#0f172a', display: 'block' }}>{edu.degree}</strong>
+                    <span style={{ color: '#64748b', display: 'block' }}>{edu.school}</span>
+                    <span
+                      style={{
+                        color: '#94a3b8',
+                        display: 'block',
+                        fontFamily: 'monospace',
+                        fontSize: '10px',
+                      }}
+                    >
                       {edu.startDate} - {edu.endDate}
                     </span>
                   </div>
                 ))}
                 {data.education.length === 0 && (
-                  <p className="text-xs text-slate-400 italic">No education added</p>
+                  <p style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic' }}>
+                    No education added
+                  </p>
                 )}
               </div>
             </div>
           </div>
 
           {/* Main (right) */}
-          <div className="col-span-8 space-y-5">
+          <div
+            style={{
+              gridColumn: 'span 8 / span 8',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+            }}
+          >
             {data.summary && (
               <div>
-                <h3 className="text-xs font-black uppercase tracking-widest mb-2 flex items-center gap-1.5">
+                <h3
+                  style={{
+                    fontSize: '12px',
+                    fontWeight: 900,
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.1em',
+                    marginBottom: '8px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                  }}
+                >
                   <span
-                    className="w-2 h-2 rounded-sm"
-                    style={{ background: data.accentColor }}
+                    style={{ width: '8px', height: '8px', borderRadius: '2px', background: data.accentColor }}
                   ></span>
                   Profile
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">{data.summary}</p>
+                <p style={{ fontSize: '12px', color: '#475569', lineHeight: 1.625 }}>{data.summary}</p>
               </div>
             )}
             <div>
-              <h3 className="text-xs font-black uppercase tracking-widest mb-2 flex items-center gap-1.5">
+              <h3
+                style={{
+                  fontSize: '12px',
+                  fontWeight: 900,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.1em',
+                  marginBottom: '8px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '6px',
+                }}
+              >
                 <span
-                  className="w-2 h-2 rounded-sm"
-                  style={{ background: data.accentColor }}
+                  style={{ width: '8px', height: '8px', borderRadius: '2px', background: data.accentColor }}
                 ></span>
                 Experience
               </h3>
-              <div className="space-y-4">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                 {data.experience.map((exp, idx) => (
-                  <div key={idx} className="text-xs">
-                    <div className="flex justify-between items-baseline">
-                      <h4 className="font-bold text-slate-900 text-sm">{exp.position}</h4>
-                      <span className="text-[10px] font-bold" style={{ color: data.accentColor }}>
+                  <div key={idx} style={{ fontSize: '12px' }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                      <h4 style={{ fontWeight: 700, color: '#0f172a', fontSize: '14px' }}>
+                        {exp.position}
+                      </h4>
+                      <span style={{ fontSize: '10px', fontWeight: 700, color: data.accentColor }}>
                         {exp.startDate} - {exp.endDate}
                       </span>
                     </div>
-                    <p className="text-slate-600 font-semibold text-[11px]">{exp.company}</p>
-                    <p className="text-slate-500 mt-1 text-[11px] leading-relaxed whitespace-pre-wrap">
+                    <p style={{ color: '#475569', fontWeight: 600, fontSize: '11px' }}>{exp.company}</p>
+                    <p
+                      style={{
+                        color: '#64748b',
+                        marginTop: '4px',
+                        fontSize: '11px',
+                        lineHeight: 1.625,
+                        whiteSpace: 'pre-wrap',
+                      }}
+                    >
                       {exp.description}
                     </p>
                   </div>
                 ))}
                 {data.experience.length === 0 && (
-                  <p className="text-xs text-slate-400 italic">No experience added</p>
+                  <p style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic' }}>
+                    No experience added
+                  </p>
                 )}
               </div>
             </div>
@@ -159,7 +310,9 @@ export default function BoldHeaderTemplate({ data }: ResumeTemplateProps) {
         </div>
       </div>
 
-      <div className="text-[10px] text-slate-400 text-center pb-4">Bold Header Template</div>
+      <div style={{ fontSize: '10px', color: '#94a3b8', textAlign: 'center', paddingBottom: '16px' }}>
+        Bold Header Template
+      </div>
     </div>
   )
 }
