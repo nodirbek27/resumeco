@@ -2,6 +2,7 @@ import { useState, type RefObject } from 'react'
 import type { ObektivkaFormData } from '@/types/obektivka'
 import DonateDialog from '@/components/DonateDialog'
 import './ObektivkaExport.css'
+import { captureElementAsCanvas } from '@/utils/pdfCapture'
 
 interface Props {
   formData: ObektivkaFormData
@@ -34,18 +35,13 @@ export default function ObektivkaExport({ formData, previewRef }: Props) {
       let isFirstPage = true
 
       for (const el of Array.from(pages)) {
-        const rect = el.getBoundingClientRect()
-        const canvas = await html2Canvas(el, {
-          scale: window.devicePixelRatio > 1 ? 1.5 : 2,
-          useCORS: true,
-          allowTaint: true,
-          logging: false,
-          backgroundColor: '#ffffff',
-          scrollX: -rect.left,
-          scrollY: -rect.top,
-          windowWidth: el.scrollWidth,
-          windowHeight: el.scrollHeight,
-        })
+const canvas = await captureElementAsCanvas(el, html2Canvas, {
+  scale: window.devicePixelRatio > 1 ? 1.5 : 2,
+  useCORS: true,
+  allowTaint: true,
+  logging: false,
+  backgroundColor: '#ffffff',
+})
 
         const imgData = canvas.toDataURL('image/png')
         const pdfWidth = pdf.internal.pageSize.getWidth()
